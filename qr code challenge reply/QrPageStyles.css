@@ -14,4 +14,8 @@ body {
 }
 p {
     font-size: 15px;
+    font-family: 'Outfit', sans-serif;
+}
+a {
+    text-decoration: none;
 }

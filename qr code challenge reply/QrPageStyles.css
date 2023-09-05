@@ -1,7 +1,14 @@
 #wrapper{
-    background-color: rgb(46, 97, 143);
+    background-color: hsl(212, 45%, 89%);
     position: absolute;
+    border-radius: 30px;
+    width: auto;
+    height: 500px;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    text-align: center;
+}
+body {
+    background-color: hsl(218, 44%, 22%);
 }

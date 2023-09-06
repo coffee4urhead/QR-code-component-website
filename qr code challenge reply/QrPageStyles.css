@@ -3,7 +3,7 @@
     position: absolute;
     border-radius: 30px;
     width: auto;
-    height: 500px;
+    height: auto;
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
@@ -18,4 +18,67 @@ p {
 }
 a {
     text-decoration: none;
+}
+#qr-code-img {
+    max-width: 50%;
+    max-height: 50%;
+    border-radius: 25%;
+    vertical-align: text-bottom;
+}
+#wrapper #qr-code-img {
+    vertical-align: -webkit-baseline-middle;
+}
+#bottom-wrap {
+    width: 500px;
+    height: 400px;
+    position: absolute;
+    border-radius: 25%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: antiquewhite;
+    box-shadow: 2px 2px 4px black, 3px 3px 3px red, 2px 3px yellowgreen;
+}
+#bottom-wrap:hover {
+    animation: animationForQrCode 5s ease-in-out 2s 2 alternate;
+}
+@keyframes animationForQrCode {
+    from {
+        transform: rotate(10deg);
+        transform: skew(12deg);
+        font-size: small;
+    }
+    20%{background-image: repeating-linear-gradient(bottom, rgb(251, 255, 0), rgb(50, 123, 14), rgb(115, 206, 115), rgb(71, 71, 19));
+        transform: rotate(19deg);
+        transform: skew(22deg);
+        font-size: 23px;
+    };
+    40%{background-image: repeating-linear-gradient(bottom, rgb(251, 255, 0), rgb(50, 123, 14), rgb(115, 206, 115), rgb(71, 71, 19));
+        transform: rotate(28deg);
+        transform: skew(32deg);
+        font-size: 26px;
+    };
+    60%{background-image: repeating-linear-gradient(bottom, rgb(251, 255, 0), rgb(50, 123, 14), rgb(115, 206, 115), rgb(71, 71, 19));
+        transform: rotate(37deg);
+        transform: skew(42deg);
+        font-size: 29px;
+    };
+    80%{background-image: repeating-linear-gradient(bottom, rgb(251, 255, 0), rgb(50, 123, 14), rgb(115, 206, 115), rgb(71, 71, 19));
+        transform: rotate(46deg);
+        transform: skew(52deg);
+        font-size: 32px;
+    };
+    to {
+        transform: skew(52deg);
+        transform: rotate(180deg);
+        font-size: large;
+    }
+}
+@media only screen and (width <= 375px) {
+    #bottom-wrap {
+        width: 100%;
+    }
+    #bottom-wrap #wrapper{
+        width: 50%;
+    }
 }
